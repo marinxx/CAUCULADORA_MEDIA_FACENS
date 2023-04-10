@@ -1,0 +1,67 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+    //comando para a repetição da programaçao 
+    char continuar = 's';
+    while (continuar == 's' || continuar == 'S') {
+    string nome;
+    //variaveis
+    double AC1, AC2, AG, AF, RA;
+    double soma;
+    //indentificaçao do aluno
+    cout << "Digite seu nome e seu RA >>>";
+    cin << nome << RA;
+    //notas
+    cout << "-Calculadora para a média da Facens-" << endl;
+    //nota da AC1
+    cout << "Digite a sua nota da AC1 >>> ";
+    cin >> AC1;
+    //nota da AC2
+    cout << "Digite a sua nota da AC2 >>> ";
+    cin >> AC2;
+    //nota da AG
+    cout << "Digite a sua nota da Avaaliaçao geral >>> ";
+    cin >> AG;
+    //nota da AF
+    cout << "Digite sua nota da Avaliaçao final >>> ";
+    cin >> AF;
+    
+    //conta para conseguir obter os valores da media de cada prova
+    double mediaAC1, mediaAC2, mediaAG, madiaAF;
+    mediaAC1 = (AC1 * 0.15);
+    mediaAC2 = (AC2 * 0.35);
+    mediaAG = (AG * 0.1);
+    mediaAF = (AF * 0.4);
+    //switch é para dar opcoes de resultado para cada nota
+    switch((int)soma) {
+    //casos que o aluno sera aprovado
+    case 10:
+    case 9:
+    case 8:
+    case 7:
+    case 6:
+    case 5:
+    
+    cout << "Parabéns, "<< nome <<". Você foi aprovado com "<< soma << endl;
+    
+    break;
+    //casos que o aluno ira para a recuperaçao
+    case 4:
+    case 3:
+    
+    cout << "Voce terá que fazer recuperaçao por conta do seu "<< soma << endl;
+    
+    break;
+    //se a nota for menor que 3, sera os casos que o aluno foi reprovado
+    default:
+    cout << "Voce reprovou com "<<soma<< endl;
+    break;
+    }
+     //mensagem que aparecerá na tela, para que a repeticao aconteca
+    cout << "Deseja continuar (s/n)?: ";
+    cin >> continuar;
+    }
+    return 0;
+}
